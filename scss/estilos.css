@@ -1,0 +1,263 @@
+@charset "UTF-8";
+html {
+  font-size: 15px; }
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: #6c3f21; }
+
+.bienvenidos {
+  background: url("../images/fondo-encabezado.png") no-repeat center top;
+  color: #fff;
+  background-size: cover;
+  background-attachment: fixed !important;
+  height: 100vh;
+  display: flex;
+  flex-direction: column; }
+
+.encabezado {
+  background: #DBB7A7;
+  color: #fff;
+  padding: .5rem 0;
+  transition: all .5s ease; }
+
+.encabezado.fondo-menu {
+  background: #F5E8F5;
+  padding: 1rem 0; }
+
+.encabezado .container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap; }
+
+.encabezado .logo img {
+  width: 150px;
+  height: auto; }
+
+/*Estilos para el boton: buscar y menu*/
+.boton-menu {
+  border: 0;
+  font-size: 2rem;
+  margin: 0;
+  padding: 0 .5rem;
+  background: transparent;
+  color: #fff; }
+
+.boton-menu:focus {
+  outline: 0; }
+
+.boton-menu {
+  margin-left: auto;
+  margin-right: .8rem; }
+
+/*Estilos bloque buscar*/
+#menu-principal {
+  flex: 1 1 100%; }
+
+#menu-principal ul {
+  padding: 0;
+  list-style: none;
+  margin: 1rem 0 0 0; }
+
+#menu-principal ul a {
+  display: block;
+  padding: .8rem 0;
+  text-align: center;
+  color: #66383F;
+  text-transform: uppercase;
+  border-top: 1px solid #8c8888;
+  text-decoration: none; }
+
+#menu-principal ul a:hover,
+#menu-principal ul li.active a {
+  color: #6c3f21; }
+
+.texto-encabezado {
+  flex: 1 1 auto;
+  display: flex;
+  align-items: center; }
+
+.texto-encabezado .display-4 {
+  margin-top: 4rem; }
+
+.texto-encabezado .btn-primary {
+  margin-top: 1rem; }
+
+.btn-primary {
+  color: #fff;
+  background-color: #DBB7A7;
+  border-color: transparent;
+  transition: all .5s ease; }
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active:hover {
+  background-color: #66383F;
+  border-color: transparent; }
+
+.flecha-bajar a {
+  display: inline-block;
+  color: #fff;
+  font-size: 4rem;
+  animation: flecha-animada 2s ease-in-out infinite; }
+
+@keyframes flecha-animada {
+  from {
+    transform: translateY(0); }
+  50% {
+    transform: translateY(6px); }
+  to {
+    transform: translateY(0); } }
+/*-----------------------------
+SECCION BUENA-COMIDA
+------------------------------*/
+.buena-comida {
+  padding-top: 20px;
+  position: relative; }
+
+.buena-comida-cabezera .pienosotros {
+  margin-top: 20px;
+  border: 2px solid #262626; }
+
+.buena-comida-titulo h2 {
+  border-bottom: 2px dotted #888;
+  padding-bottom: 10px; }
+
+.pienosotros {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+  text-align: center; }
+
+.pienosotros a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 10px 20px;
+  letter-spacing: 0.1rem;
+  color: #6c3f21; }
+
+.pienosotros a:hover {
+  background: #66383F;
+  color: #FFF2FF; }
+
+/*-----------------------------
+SECCION delicias
+------------------------------*/
+.delicias {
+  background: #DBB7A7;
+  color: #fff; }
+
+.delicias img {
+  width: 120%;
+  margin: 0 auto;
+  display: block; }
+
+.delicias:hover {
+  background: #6c3f21; }
+
+/*----------------------------
+SECCION TU MEJOR ELECCIÓN
+----------------------------*/
+.tu-mejor-eleccion h2 span {
+  color: #DBB7A7; }
+
+.tu-mejor-eleccion ul,
+.tu-mejor-eleccion ul li {
+  list-style: none; }
+
+.tu-mejor-eleccion ul li .fa {
+  font-size: 2.3rem;
+  background: #66383F;
+  border-radius: 50%;
+  width: 4.7rem;
+  height: 4.7rem;
+  line-height: 4.7rem;
+  color: #fff; }
+
+.tu-mejor-eleccion ul li .fa img {
+  width: 3rem;
+  margin-top: -1rem; }
+
+.tu-mejor-eleccion ul li .contenedor-eleccion h4 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: .8rem; }
+
+.tu-mejor-eleccion ul li {
+  min-height: 9rem; }
+
+.ir-arriba {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  font-size: 3rem;
+  color: #12afaf;
+  text-decoration: none;
+  z-index: 99999;
+  line-height: 0;
+  display: none;
+  transition: all .5s ease; }
+
+.ir-arriba:hover,
+.ir-arriba:focus {
+  outline: 0;
+  text-decoration: none;
+  color: #fff; }
+
+/*---------------------------------------------
+EMPIEZAN LAS MEDIAS QUERIES
+--------------------------------------------*/
+@media (min-width: 768px) {
+  #menu-principal {
+    height: auto !important;
+    display: block;
+    flex: 0 1 auto;
+    margin-left: auto;
+    order: 1; }
+
+  #menu-principal ul {
+    display: flex;
+    margin: 0 0 0 0; }
+
+  #menu-principal ul li a {
+    padding: .8rem;
+    text-transform: capitalize;
+    margin: 0 .3rem;
+    border-top: 0px;
+    border-bottom: 4px solid transparent;
+    transition: all 0.5s ease; }
+
+  #menu-principal ul li.active a,
+  #menu-principal ul li a:hover {
+    color: #12AFAF;
+    border-bottom: 4px solid; }
+
+  .delicias img {
+    width: 80%; } }
+@media (min-width: 992px) {
+  html {
+    font-size: 16px; }
+
+  .bienvenidos {
+    background: url("../images/fondo-encabezado-grande.jpg") no-repeat center top;
+    background-size: cover; }
+
+  .tu-mejor-eleccion ul li {
+    display: flex;
+    min-height: 7rem; }
+
+  .tu-mejor-eleccion ul li .fa {
+    text-align: center;
+    flex: 0 1 auto;
+    margin-right: 1rem;
+    transition: all 1s ease; }
+
+  .tu-mejor-eleccion ul li:hover .fa {
+    transform: rotateY(360deg);
+    transform-style: preserve-3d;
+    background: #12AFAF; } }
+
+/*# sourceMappingURL=estilos.css.map */
